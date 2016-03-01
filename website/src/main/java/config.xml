@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+        
+	<bean id="oldSpring" class="com.luke.oldspring.OldSpringLoadAppContext">
+		<property name="name" value="aaa" />
+		<property name="password" value="bbb" />
+		<property name="userPojo" ref="userPojo" />
+	</bean>
+	
+	<bean id="userPojo" class="com.luke.pojo.User">
+		<property name="userName" value="Mike" />
+		<property name="userLevel" value="3" />
+	</bean>
+</beans>
